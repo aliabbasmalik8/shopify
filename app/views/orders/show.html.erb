@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Purchasing price</th>
+      <th>Image</th>
+      <th>Catagory</th>
+      <th>Shop</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= product.purchasing_price %></td>
+        <td><%= image_tag(product.image.to_s, width:'50x', :align=>'middle') %></td>
+        <td><%= product.catagory %></td>
+        <td><%= product.Shop %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_shop_order_path(@order.shop_id,@order) %> |
+<%= link_to 'Back', shop_orders_path %>

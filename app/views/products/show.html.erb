@@ -1,0 +1,36 @@
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Purchasing price:</strong>
+  <%= @product.purchasing_price %>
+</p>
+
+<p>
+  <%= image_tag(@product.image.to_s, width:'150x', :align=>'middle') %>
+</p>
+
+<p>
+  <strong>Catagory:</strong>
+  <%= @product.catagory %>
+</p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @product.Shop %>
+</p>
+
+<%= link_to 'Edit', edit_shop_product_path(@product) %> |
+<%= link_to 'Back', shop_products_path %>
