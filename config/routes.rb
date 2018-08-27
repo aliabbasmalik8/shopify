@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     resources :products do 
       post :addProductId
       post :confirm_cart
+      collection do
+        get :customer_view
+      end
     end
     resources :orders
     collection do 

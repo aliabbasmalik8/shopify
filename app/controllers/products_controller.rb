@@ -76,6 +76,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  def customer_view
+    @products = @shop.products
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

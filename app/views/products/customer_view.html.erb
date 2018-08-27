@@ -1,0 +1,16 @@
+<div class="row match-height">
+    <% @products.each do |product| %>
+        <div class="col-xl-3 col-md-2 col-sm-1">
+            <div class="card" style="height: 451.109px;">
+                <div class="card-content">
+                    <%= link_to image_tag(product.image.to_s,class:"card-img-top img-fluid"), shop_product_addProductId_path(product.shop_id,product) %>
+                    <div class="card-body">
+                        <p classs="card-title"><%= product.title %></p>
+                        <p class="card-text"><%= product.description %></p>
+                        <p class="card-text">Price: <%= product.price %></p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
