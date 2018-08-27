@@ -1,27 +1,28 @@
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @shop.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @shop.name %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @shop.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @shop.description %>
-</p>
+  <p>
+    <strong>Catagory:</strong>
+    <%= @shop.catagory %>
+  </p>
 
-<p>
-  <strong>Catagory:</strong>
-  <%= @shop.catagory %>
-</p>
+  <p>
+    <strong>Sweet line:</strong>
+    <%= @shop.sweet_line %>
+  </p>
 
-<p>
-  <strong>Sweet line:</strong>
-  <%= @shop.sweet_line %>
-</p>
+  <p>
+    <%= image_tag(@shop.logo.to_s, width: '150px',:align=>"middle") %> 
+  </p>
 
-<p>
-  <%= image_tag(@shop.logo.to_s, width: '150px',:align=>"middle") %> 
-</p>
-
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %>
+  <%= link_to 'Edit', edit_shop_path(@shop) %> |
+  <%= link_to 'Back', shops_path %>
+</div>

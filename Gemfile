@@ -34,8 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootstrap-sass', '3.3.6'
+# gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'autoprefixer-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -70,6 +73,8 @@ gem 'redis'
 gem 'redis-namespace'
 
 gem 'rpush-redis'
+
+gem 'faker'
 
 gem "paranoia"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

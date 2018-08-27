@@ -4,7 +4,7 @@ class ShopsController < ApplicationController
   # GET /shops
   # GET /shops.json
   def index
-    @shops = Shop.all
+    @shops = Shop.where(user_id: current_user.id)
   end
 
   # GET /shops/1
@@ -59,6 +59,11 @@ class ShopsController < ApplicationController
       format.html { redirect_to shops_url, notice: 'Shop was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  #shops_customers for show shop images to user
+  def customer_view
+    @shops=Shop.all
   end
 
   private
