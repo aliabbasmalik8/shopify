@@ -3,7 +3,7 @@
         <div class="row match-height">
             <% @shops.each do |shop| %>
                 <div class="col-xl-4 col-md-6 col-sm-12 card-content">
-                    <% if current_user.id==shop.user_id %>
+                    <% if current_user && current_user.id==shop.user_id %>
                         <%= link_to image_tag(shop.logo.to_s,:align=>"middle", width: '350px',height: '350px'), shop_products_path(shop) %>
                     <% else %>
                         <%= link_to image_tag(shop.logo.to_s,:align=>"middle", width: '350px',height: '350px'), customer_view_shop_products_path(shop) %>

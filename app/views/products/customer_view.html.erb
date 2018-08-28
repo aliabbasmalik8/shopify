@@ -3,7 +3,7 @@
         <div class="col-xl-3 col-md-2 col-sm-1">
             <div class="card" style="height: 451.109px;">
                 <div class="card-content">
-                    <%= link_to image_tag(product.image.to_s,class:"card-img-top img-fluid"), shop_product_addProductId_path(product.shop_id,product) %>
+                    <%= link_to image_tag(product.image.to_s,class:"card-img-top img-fluid"), shop_product_addProductId_path(product.shop_id,product),remote: true, method: :post %>
                     <div class="card-body">
                         <p classs="card-title"><%= product.title %></p>
                         <p class="card-text"><%= product.description %></p>
@@ -14,3 +14,4 @@
         </div>
     <% end %>
 </div>
+<%= link_to 'Confirm Order',shop_orders_path, method: :post%>
